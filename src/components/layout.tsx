@@ -6,14 +6,14 @@ import { useRouter } from "next/router";
 import React, { useEffect, useRef, useState } from "react";
 import { usePopper } from 'react-popper';
 import { useDispatch, useSelector } from "react-redux";
+import Slider from "react-slick";
 import { App, } from "../app/constants";
 import { getApp, setApp } from "../features/app/app_slice";
 import { getPolygonCategoryList, useGetCategoryListQuery, useGetFeaturedDappsQuery } from "../features/dapp/dapp_api";
 import { AppStrings } from "../pages/constants";
+import { FeaturedCard, SliderButton } from "./card";
 import { Button, Card } from "./index";
 import { Row } from "./layout/flex";
-import { FeaturedCard, SliderButton } from "./card";
-import Slider from "react-slick";
 
 
 
@@ -386,6 +386,12 @@ export function PageLayout(props) {
                 </section>
 
             </Row>
+            {/* <div className="bg-gradient-radial from-[#0D67FE] via-[#0D67FE00] to-transparent w-[70vw] rounded-full fixed -bottom-[30vw] -right-[30vw] h-[70vw] -z-10"></div>
+            <div className="bg-gradient-radial from-[#0D67FE] via-[#0D67FE00] to-[#0a090d] w-[70vw] rounded-full fixed -bottom-[10vw] right-[10vw] h-[40vw] -z-20"></div> */}
+            <div className=" ">
+                <NXTImage className="fixed -bottom-0 -right-0 h-screen w-screen -z-10" width={App.logo.width} height={App.logo.height} src="/bg.svg"
+                    alt={`${App.name} Logo`} />
+            </div>
 
         </article>
     );

@@ -21,6 +21,8 @@ module.exports = {
       },
       backgroundImage: {
         'card-bg': 'linear-gradient(180deg, #141217 0%, #0E0C12 100%);',
+                'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+
       },
       borderRadius: {
         'card-radius': '12px',
